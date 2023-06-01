@@ -15,12 +15,12 @@ I have included basic tests using the built-in `assert` function in Node.js to v
 To use or contribute to this project, follow these steps:
 
 1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the project directory: `cd factorial-addition`
-3. Install the dependencies: `npm install`
-4. Run the tests: `npm test`
+2. Read my awesome code
+3. You can test yourself if you have node installed; run node <file-name>.js
+4. Please feel free to comment with feedback and suggestions for improvement
 
 Feel free to explore the code, make improvements, or use it as a reference for your own projects.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License.
