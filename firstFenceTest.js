@@ -12,17 +12,17 @@ The function should be written in JavaScript with an emphasis on efficiency and 
 //Actually function can be more useful as can be defined after calling it in page order.
 const exampleFunction = () => {
 
-    //ok so lets use the example given to talk through
+    //Ok so lets use the example given to talk through
     const exampleList = [1, 2, 3, 4, 5];
     const exampleFactor = 2;
 
-    //define variable to hold example actual result, define as 0 to imply its a number variable
+    //Define variable to hold example actual result, define as 0 to imply its a number variable
     let exampleResult = 0;
 
-    //first, need to loop through each item in array, for performance, for can be used as simpler and more efficient than forEach
-    //use i as iterator, the index of each item in array, adding one each time loops through all items until the array length (last item) is done.
+    //First, need to loop through each item in array, for performance, for can be used as simpler and more efficient than forEach
+    //Use i as iterator, the index of each item in array, adding one each time loops through all items until the array length (last item) is done.
     for (let i = 0; i < exampleList.length; i++) {
-        //first find out if the number has 2 as a factor, if it does, it will divide by it and the result will be a whole number. Most efficient to use Modulo function % as basic and most efficient
+        //First find out if the number has 2 as a factor, if it does, it will divide by it and the result will be a whole number. Most efficient to use Modulo function % as basic and most efficient
         if (exampleList[i] % exampleFactor == 0) {
             console.log(`Integer returned! ${exampleList[i]} has ${exampleFactor} as a factor.`);
             exampleResult += exampleList[i];
@@ -30,15 +30,15 @@ const exampleFunction = () => {
         }
 
     }
-    //return result
-    //console log it in a sentence to be clearer
+    //Return result
+    //Console log it in a sentence to be clearer
     console.log(`Function result was ${exampleResult}`);
     return exampleResult;
 }
 
-//it works, result is 6. You can test yourself by opening terminal and typing 'node first-fence-test.js'
-//now make the actual function - same as above just assigning parameters so we can enter whatever numbers and factors we like
-//Ill use traditional function syntax this time to show off both
+//It works! The result is 6. 
+//Now to make the actual function - same as above just assigning parameters so we can enter whatever numbers and factors we like.
+//I'll use traditional function syntax this time to show off both.
 
 function actualSumFactorFunction(listOfNumbers, factor) {
     //create and initialise varaible to store result
@@ -55,18 +55,18 @@ function actualSumFactorFunction(listOfNumbers, factor) {
     return result;
 }
 
-//wrap test function in function to prevent it being called when importing module
-//this one wont be available for export to differentiate from the one you wanted exporting
+//Wrap the test function in function to prevent it being called when importing module.
+//This one wont be available for export to differentiate from the one you wanted exporting.
 const testIt = () => {
-    //examples to test it works, you can run in terminal to check these
+    //Examples to test it works, you can run in terminal to check these
     console.log(actualSumFactorFunction([2, 4, 6, 8], 2));
     //Should be ^20^
 }
 
-//export as module
-//have set the actual function you requested to be exported as default
+//Export as module.
+//Have set the actual function you requested to be exported as default.
 export { exampleFunction, actualSumFactorFunction as default };
 
-//checkout import-test.js to see working imported function
-//had to add package.json to configure modules, i could have also renamed extension from .js to .mjs
+//Checkout import-test.js to see working imported function.
+//Had to add package.json to configure modules, I could have also renamed extension from .js to .mjs.
 
